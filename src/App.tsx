@@ -9,7 +9,7 @@ import PopUp from './components/PopUp';
 import Word from './components/Word';
 import WrongLetters from './components/WrongLetters';
 
-const words = ['application', 'programming', 'interface', 'wizard', 'biscuits'];
+const words: string[]= ['application', 'programming', 'interface', 'wizard', 'biscuits'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
@@ -17,16 +17,16 @@ let selectedWord = words[Math.floor(Math.random() * words.length)];
 function App() {
 
   const [playable, setPlayable] = useState(true);
-  const [correctLetters, setCorrectLetters] = useState([]);
+  const [correctLetters, setCorrectLetters] = useState<string[]>([]);
   const [wrongLetters, setWrongLetterw] = useState([]);
-  
+
   return (
     <div className="App">
         <Header />
         <div className="game-container">
            <Figure />
            <WrongLetters />
-           <Word />
+           <Word selectedWord = {selectedWord} correctLetters={correctLetters} />
         </div>
         <PopUp />
         <Notification />
