@@ -45,3 +45,28 @@
   .App .figure-part {
     display: none;
   }
+
+  .App .wrong-letters-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+  
+  .App .wrong-letters-container p {
+    margin: 0 0 5px;
+  }
+  
+  .App .wrong-letters-container span {
+    font-size: 24px;
+  }
+  
+  .App .word {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
