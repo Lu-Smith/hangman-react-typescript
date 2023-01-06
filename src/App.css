@@ -14,8 +14,34 @@
     margin: 20px 0 0;
 }
 
+.App p {
+    margin: 20px 0 0;
+    font-style: italic;
+}
+
 .App a {
     text-decoration: none;
     color: rgb(212, 211, 211);
     font-weight: 700;
 }
+
+.App .game-container {
+    padding: 20px 30px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    width: 450px;
+    color: black;
+    background-color: rgb(153, 158, 179);
+  }
+
+  .App .figure-container {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+  }
+  
+  .App .figure-part {
+    display: none;
+  }
