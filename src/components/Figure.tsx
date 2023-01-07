@@ -1,6 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const Figure = () => {
+interface wrongLettersProps {
+  wrongLetters: string[];
+}
+
+const Figure = ({wrongLetters}:wrongLettersProps) => {
+  const errors = wrongLetters.length;
   return (
     <svg height="250" width="200" className="figure-container">
     */ Rod /*
@@ -10,7 +15,7 @@ const Figure = () => {
     <line x1="20" y1="230" x2="100" y2="230" />
 
     */ Head /*
-    <circle cx="140" cy="70" r="20" className="figure-part" />
+    {errors > 0 && <circle cx="140" cy="70" r="20" className="figure-part" />}
     */ Body /*
     <line x1="140" y1="90" x2="140" y2="150" className="figure-part" />
     */ Arms /*
