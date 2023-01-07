@@ -8,6 +8,7 @@ import Notification from './components/Notification';
 import PopUp from './components/PopUp';
 import Word from './components/Word';
 import WrongLetters from './components/WrongLetters';
+import { showNotification as show } from './helpers/helpers';
 
 const words: string[]= ['variable', 'application', 'statement', 'programming', 'interface', 'wizard', 'algorithm', 'autonomous'];
 
@@ -31,13 +32,13 @@ function App() {
               if (!correctLetters.includes(letter)) {
                 setCorrectLetters(currentLetters => [...currentLetters, letter]);
               } else {
-                //showNotification
+                show(setShowNotification);
               }
             } else {
               if (!wrongLetters.includes(letter)) {
                 setWrongLetters(currentLetters => [...currentLetters, letter]);
               } else {
-                //showNotification
+                show(setShowNotification);
               }
             }
         }
