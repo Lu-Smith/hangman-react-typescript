@@ -40,10 +40,6 @@
     stroke-width: 4px;
     stroke-linecap: round;
   }
-  
-  .App .figure-part {
-    display: none;
-  }
 
   .App .wrong-letters-container {
     position: absolute;
