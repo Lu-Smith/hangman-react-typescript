@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     margin: 0;
     overflow: hidden;  
 }
@@ -17,6 +17,10 @@
 .App p {
     margin: 20px 0 0;
     font-style: italic;
+}
+
+.App .Footer {
+  margin-bottom: 20px;
 }
 
 .App a {
