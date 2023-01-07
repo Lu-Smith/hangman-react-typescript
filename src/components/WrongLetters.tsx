@@ -2,7 +2,6 @@ import React from 'react';
 
 interface wrongLettersProps {
   wrongLetters: string[];
-
 }
 
 const WrongLetters = ({wrongLetters}: wrongLettersProps) => {

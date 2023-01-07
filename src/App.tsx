@@ -1,6 +1,6 @@
 
 import './App.css';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Figure from './components/Figure';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -19,6 +19,31 @@ function App() {
   const [playable, setPlayable] = useState(true);
   const [correctLetters, setCorrectLetters] = useState<string[]>([]);
   const [wrongLetters, setWrongLetterw] = useState<string[]>([]);
+
+  useEffect(() => {
+    const handleKeydown = (e: KeyboardEvent) => {
+        const {key, keyCode} = e;
+          if (playable && keyCode >= 65 && keyCode <= 90) {
+            const letter = key.toLowerCase();
+      
+            if (selectedWord.includes(letter)) {
+              if (!correctLetters.includes(letter)) {
+                setCorrectLetters(currentLetters => [...currentLetters, letter]);
+              } else {
+                //showNotification
+              }
+            } else {
+              if (!wrongLetters.includes(letter)) {
+                setCorrectLetters(currentLetters => [...currentLetters, letter]);
+              } else {
+                //showNotification
+              }
+            }
+        }
+      }
+    window.addEventListener('keydown', handleKeydown);
+    return () => window.removeEventListener('keydown', handleKeydown);
+  }, [correctLetters, wrongLetters, playable]);
 
   return (
     <div className="App">
