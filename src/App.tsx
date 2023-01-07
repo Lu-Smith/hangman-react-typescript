@@ -18,7 +18,7 @@ function App() {
 
   const [playable, setPlayable] = useState(true);
   const [correctLetters, setCorrectLetters] = useState<string[]>([]);
-  const [wrongLetters, setWrongLetterw] = useState<string[]>([]);
+  const [wrongLetters, setWrongLetters] = useState<string[]>([]);
 
   useEffect(() => {
     const handleKeydown = (e: KeyboardEvent) => {
@@ -34,7 +34,7 @@ function App() {
               }
             } else {
               if (!wrongLetters.includes(letter)) {
-                setCorrectLetters(currentLetters => [...currentLetters, letter]);
+                setWrongLetters(currentLetters => [...currentLetters, letter]);
               } else {
                 //showNotification
               }
