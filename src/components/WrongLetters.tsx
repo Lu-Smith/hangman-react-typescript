@@ -1,9 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-const WrongLetters = () => {
+interface wrongLettersProps {
+  wrongLetters: string[];
+
+}
+
+const WrongLetters = ({wrongLetters}: wrongLettersProps) => {
   return (
       <div className="wrong-letters-container">
-        <div id="wrong-letters"></div>
+        <div>
+        {wrongLetters.length > 0 && '<p>Wrong</p>'}
+        {wrongLetters
+          .map((letter, i: number) => <span key={i}>{letter}</span> )}
+        </div>
       </div>
   )
 }
