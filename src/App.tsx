@@ -16,9 +16,10 @@ let selectedWord: string = words[Math.floor(Math.random() * words.length)];
 
 function App() {
 
-  const [playable, setPlayable] = useState(true);
+  const [playable, setPlayable] = useState<boolean>(true);
   const [correctLetters, setCorrectLetters] = useState<string[]>([]);
   const [wrongLetters, setWrongLetters] = useState<string[]>([]);
+  const [showNotification, setShowNotification] = useState<boolean>(false);
 
   useEffect(() => {
     const handleKeydown = (e: KeyboardEvent) => {
