@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface PopupProps {
+interface PopUpProps {
   wrongLetters: string[];
   correctLetters: string[];
   selectedWord: string;
@@ -8,13 +8,16 @@ interface PopupProps {
 
 }
 
-const PopUp = ({correctLetters, wrongLetters, selectedWord, setPlayable}:PopupProps) => {
+const PopUp = ({correctLetters, wrongLetters, selectedWord, setPlayable}:PopUpProps) => {
+  let finalMessage = '';
+  let finalMessageRevealWord = '';
+  let playable = true;
   return (
     <div className="popup-container">
         <div className="popup">
-            <h2 id="final-message"></h2>
-            <h3 id="final-message-reveal-word"></h3>
-            <button id="play-button">Play Again</button>
+            <h2></h2>
+            <h3></h3>
+            <button>Play Again</button>
         </div>
   </div>
   )
