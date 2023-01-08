@@ -122,17 +122,17 @@
   
   .App .notification-container {
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 10px 10px 0 0;
-    padding: 15px 20px;
-    position: absolute;
-    bottom: -50px;
+    border-radius: 10px;
+    display: none;
     transition: transform 0.3s ease-in-out;
+    margin-top: 150px;
+    font-size: 1.2rem;
   }
-  
-  .App .notification-container p {
-    margin: 0;
+
+  .App .notification-container p{
+    margin: 10px auto;
   }
   
   .App .notification-container.show {
-    transform: translateY(-50px);
+    display: flex;
   }
