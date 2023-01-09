@@ -5,7 +5,7 @@ export function showNotification(setter: any) {
     }, 2000);
 }
 
-export function checkWin(correct: string, wrong: string, word: string) {
+export function checkWin(correct: string[], wrong: string[], word: string) {
     let status = 'win';
 
     //check for win

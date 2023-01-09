@@ -1,4 +1,5 @@
 import React from 'react';
+import { checkWin } from '../helpers/helpers';
 
 interface PopUpProps {
   wrongLetters: string[];
@@ -12,6 +13,16 @@ const PopUp = ({correctLetters, wrongLetters, selectedWord, setPlayable}:PopUpPr
   let finalMessage = '';
   let finalMessageRevealWord = '';
   let playable = true;
+
+  if(checkWin(correctLetters, wrongLetters, selectedWord) === 'win') {
+    finalMessage = 'Congratulations! You won 😄';
+    playable = false;
+  } else {
+    finalMessage = 'You lost 😔';
+    finalMessageRevealWord = '... the word was: ${selectedWord';
+    playable = false;
+  }
+  
   return (
     <div className="popup-container">
         <div className="popup">
