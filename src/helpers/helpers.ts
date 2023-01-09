@@ -11,7 +11,7 @@ export function checkWin(correct: string[], wrong: string[], word: string) {
     //check for win
 
     word.split('').forEach(letter => {
-        if(correct.includes(letter)){
+        if(!correct.includes(letter)){
             status = '';
         }
     });

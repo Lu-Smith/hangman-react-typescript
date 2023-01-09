@@ -5,7 +5,7 @@ interface PopUpProps {
   wrongLetters: string[];
   correctLetters: string[];
   selectedWord: string;
-  setPlayable: boolean;
+  setPlayable: boolean ;
 
 }
 
@@ -23,7 +23,7 @@ const PopUp = ({correctLetters, wrongLetters, selectedWord, setPlayable}:PopUpPr
     playable = false;
   }
 
-  useEffect(() => setPlayable(playable));
+
   
   return (
     <div className="popup-container">
