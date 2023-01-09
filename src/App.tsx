@@ -57,7 +57,7 @@ function App() {
 
     const random = Math.floor(Math.random() * words.length);
     selectedWord = words[random];
-  }
+  };
 
   return (
     <div className="App">
