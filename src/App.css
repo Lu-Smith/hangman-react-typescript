@@ -50,6 +50,10 @@
     stroke-linecap: round;
   }
 
+  .App .figure-container .rod {
+    stroke: #f3c46d;
+  }
+
   .App .wrong-letters-container {
     position: absolute;
     top: 20px;
@@ -57,10 +61,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: rgb(107, 10, 10);
-    background-color: #f3c46d;
-    padding: 30px;
-    border-radius: 50%;
+    color: #f3c46d;
     font-weight: 700;
   }
   
@@ -71,7 +72,7 @@
   
   .App .wrong-letters-container span {
     font-size: 24px;
-    color: black;
+    color: white;
     font-weight: 500;
   }
   
