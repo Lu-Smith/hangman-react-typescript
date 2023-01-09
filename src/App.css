@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
+
 .App {
     background-color: #56776a;
     color: #fff;
@@ -8,10 +10,13 @@
     height: 100vh;
     margin: 0;
     overflow: hidden;  
+    font-family: 'Roboto', sans-serif;
 }
 
 .App h1 {
     margin: 20px 0 0;
+    font-family: 'Righteous', cursive;
+    font-size: 3em;
 }
 
 .App p {
@@ -25,9 +30,11 @@
 
 .App a {
     text-decoration: none;
-    color: rgb(212, 211, 211);
     font-weight: 700;
     transition: 200ms all ease-in;
+    font-family: 'Righteous', cursive;
+    color: white;
+    letter-spacing: 0.2em;
 }
 .App a:active, .App a:hover {
     color: #f3c46d;
