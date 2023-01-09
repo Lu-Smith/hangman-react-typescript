@@ -5,14 +5,16 @@ interface PopUpProps {
   wrongLetters: string[];
   correctLetters: string[];
   selectedWord: string;
-  setPlayable: boolean ;
+  setPlayable: (playable: boolean) => void;
+  playAgain: () => void;
 
 }
 
-const PopUp = ({correctLetters, wrongLetters, selectedWord, setPlayable}:PopUpProps) => {
+const PopUp = ({correctLetters, wrongLetters, selectedWord, setPlayable, playAgain}:PopUpProps) => {
   let finalMessage = '';
   let finalMessageRevealWord = '';
   let playable = true;
+ 
 
   if(checkWin(correctLetters, wrongLetters, selectedWord) === 'win') {
     finalMessage = 'Congratulations! You won 😄';
@@ -23,14 +25,14 @@ const PopUp = ({correctLetters, wrongLetters, selectedWord, setPlayable}:PopUpPr
     playable = false;
   }
 
-
+  useEffect(() => setPlayable(playable));
   
   return (
     <div className="popup-container">
         <div className="popup" style={finalMessage !== '' ? {display: 'flex'} : {}}>
             <h2></h2>
             <h3></h3>
-            <button>Play Again</button>
+            <button onClick={playAgain}>Play Again</button>
         </div>
   </div>
   )
