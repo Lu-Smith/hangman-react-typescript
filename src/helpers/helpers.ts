@@ -15,4 +15,10 @@ export function checkWin(correct: string, wrong: string, word: string) {
             status = '';
         }
     });
+
+    //check for lose
+
+    if(wrong.length === 6) status = 'Lose';
+
+    return status;
 }
