@@ -30,7 +30,7 @@
     transition: 200ms all ease-in;
 }
 .App a:active, .App a:hover {
-    color: rgb(150, 140, 140);
+    color: #f3c46d;
     letter-spacing: 0.4em;
 }
 
@@ -57,16 +57,22 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: rgb(116, 8, 8);
+    color: rgb(107, 10, 10);
+    background-color: #f3c46d;
+    padding: 30px;
+    border-radius: 50%;
+    font-weight: 700;
   }
   
   .App .wrong-letters-container p {
     margin: 0 0 5px;
+    
   }
   
   .App .wrong-letters-container span {
     font-size: 24px;
     color: black;
+    font-weight: 500;
   }
   
   .App .word {
