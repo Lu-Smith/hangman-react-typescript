@@ -27,6 +27,11 @@
     text-decoration: none;
     color: rgb(212, 211, 211);
     font-weight: 700;
+    transition: 200ms all ease-in;
+}
+.App a:active, .App a:hover {
+    color: rgb(150, 140, 140);
+    letter-spacing: 0.4em;
 }
 
 .App .game-container {
@@ -106,17 +111,18 @@
     cursor: pointer;
     background-color: #fff;
     color: #b95229;
-    border: 0;
+    border: none;
     margin-top: 20px;
     padding: 12px 20px;
     font-size: 16px;
     font-weight: 600;
   }
   
-  .App .popup button:active, button:hover {
+  .App .popup button:active, .App .popup button:hover {
     transform: scale(0.95);
-    background-color: rgb(175, 172, 172);
-    color: #4e2312;
+    background-color: rgb(194, 191, 191);
+    color: #612c18;
+    border: 2px solid #612c18;
   }
   
   .App .notification-container {
@@ -128,7 +134,7 @@
     font-size: 1.2rem;
   }
 
-  .App .notification-container p{
+  .App .notification-container p {
     margin: 10px auto;
   }
   
