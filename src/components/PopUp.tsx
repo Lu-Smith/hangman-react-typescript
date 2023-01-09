@@ -23,7 +23,6 @@ const PopUp = ({correctLetters, wrongLetters, selectedWord, setPlayable, playAga
     finalMessage = 'You lost 😔';
     finalMessageRevealWord = `... the word was: ${selectedWord}`;
     playable = false;
-    console.log(finalMessage);
   } else {
        playable = true;
   }
