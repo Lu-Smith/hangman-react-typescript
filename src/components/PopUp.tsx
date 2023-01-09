@@ -21,7 +21,7 @@ const PopUp = ({correctLetters, wrongLetters, selectedWord, setPlayable, playAga
     playable = false;
   } else {
     finalMessage = 'You lost 😔';
-    finalMessageRevealWord = '... the word was: ${selectedWord';
+    finalMessageRevealWord = `... the word was: ${selectedWord}`;
     playable = false;
   }
 
@@ -30,8 +30,8 @@ const PopUp = ({correctLetters, wrongLetters, selectedWord, setPlayable, playAga
   return (
     <div className="popup-container">
         <div className="popup" style={finalMessage !== '' ? {display: 'flex'} : {}}>
-            <h2></h2>
-            <h3></h3>
+            <h2>{finalMessage}</h2>
+            <h3>{finalMessageRevealWord}</h3>
             <button onClick={playAgain}>Play Again</button>
         </div>
   </div>
