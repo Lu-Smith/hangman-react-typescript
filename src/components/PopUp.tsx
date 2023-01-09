@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { checkWin } from '../helpers/helpers';
 
 interface PopUpProps {
@@ -22,10 +22,12 @@ const PopUp = ({correctLetters, wrongLetters, selectedWord, setPlayable}:PopUpPr
     finalMessageRevealWord = '... the word was: ${selectedWord';
     playable = false;
   }
+
+  useEffect(() => setPlayable(playable));
   
   return (
     <div className="popup-container">
-        <div className="popup">
+        <div className="popup" style={finalMessage !== '' ? {display: 'flex'} : {}}>
             <h2></h2>
             <h3></h3>
             <button>Play Again</button>
