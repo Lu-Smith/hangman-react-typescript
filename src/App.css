@@ -1,5 +1,5 @@
 .App {
-    background-color: #34495e;
+    background-color: #56776a;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
@@ -40,7 +40,7 @@
     margin: auto;
     height: 350px;
     width: 450px;
-    color: black;
+    color: rgb(171, 229, 145);
   }
 
   .App .figure-container {
@@ -56,7 +56,8 @@
     right: 20px;
     display: flex;
     flex-direction: column;
-    text-align: right;
+    text-align: center;
+    color: rgb(116, 8, 8);
   }
   
   .App .wrong-letters-container p {
@@ -65,6 +66,7 @@
   
   .App .wrong-letters-container span {
     font-size: 24px;
+    color: black;
   }
   
   .App .word {
@@ -76,7 +78,7 @@
   }
 
   .App .letter {
-    border-bottom: 3px solid #2980b9;
+    border-bottom: 3px solid #4bb929;
     display: inline-flex;
     font-size: 30px;
     align-items: center;
