@@ -18,7 +18,7 @@ export function checkWin(correct: string[], wrong: string[], word: string) {
 
     //check for lose
 
-    if(wrong.length === 6) status = 'Lose';
+    if(wrong.length === 6) status = 'lose';
 
     return status;
 }

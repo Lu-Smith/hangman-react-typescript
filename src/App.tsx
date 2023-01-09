@@ -44,6 +44,9 @@ function App() {
         }
       }
     window.addEventListener('keydown', handleKeydown);
+    console.log(correctLetters);
+    console.log(wrongLetters);
+    console.log(playable);
     return () => window.removeEventListener('keydown', handleKeydown);
   }, [correctLetters, wrongLetters, playable]);
 
