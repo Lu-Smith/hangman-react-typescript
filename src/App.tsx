@@ -10,7 +10,11 @@ import Word from './components/Word';
 import WrongLetters from './components/WrongLetters';
 import { showNotification as show } from './helpers/helpers';
 
-const words: string[]= ['variable', 'application', 'statement', 'programming', 'interface', 'wizard', 'algorithm', 'autonomous'];
+const words: string[]= ['variable', 'application', 'statement', 'javascript', 'react',
+'programming', 'interface', 'wizard', 'algorithm', 'autonomous', 'component','function',
+'development', 'framework', 'technology', 'responsive', 'frontend',
+'backend', 'architecture', 'algorithm', 'software', 'hardware', 'network',
+'security', 'debugging', 'optimization', 'scalability', 'deployment'];
 
 let selectedWord: string = words[Math.floor(Math.random() * words.length)];
 
